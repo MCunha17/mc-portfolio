@@ -80,8 +80,19 @@ function Resume() {
                 <li>Database Management: SQL</li>
                 <li>Language: English (native), Portuguese (limited working proficiency)</li>
             </ul>
-        </section>
-    );
+
+            <div style={{ marginTop: '20px' }}>
+        <a
+          href="../../public/images/maria-cunha-resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          download
+        >
+          Download Resume
+        </a>
+      </div>
+    </section>
+  );
 }
 
 export default Resume;
