@@ -8,7 +8,7 @@ function Project({ title, description, image, projectLink, repoLink }) {
         <h4 className="card-title">{title}</h4>
         <p className="card-text">{description}</p>
         <a href={projectLink} className="btn btn-secondary" target="_blank" rel="noopener noreferrer">See Project</a>
-        <a href={repoLink} className="btn btn-info" target="_blank" rel="noopener noreferrer">See Repository</a>
+        <a href={repoLink} className="btn btn-primary" target="_blank" rel="noopener noreferrer">See Repository</a>
       </div>
     </div>
   );

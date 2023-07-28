@@ -1,30 +1,41 @@
 import React from 'react';
 
 function Resume() {
-  return (
-    <section>
-        <h3>SKILLS</h3>
-            <ul>
-                <li>Digital Marketing & Advertising: Appcues, Constant Contact, Google Campaign Manager 360, Google Display & Video 360, Heap, HubSpot, Mailchimp, Pardot, Salesforce CRM, Salesforce Marketing Cloud, Unbounce</li>
-                <li>Content Creation & Design: Camtasia, Canva, Wix, WordPress</li>
-                <li>Project & Task Management: Asana, Confluence, Jira</li>
-                <li>Web Development & Programming: CSS, Express.js, HTML, JavaScript, MongoDB, Node.js, React</li>
-                <li>Database Management: SQL</li>
-                <li>Language: English (native), Portuguese (limited working proficiency)</li>
-            </ul>
-
-            <div style={{ marginTop: '20px' }}>
-        <a
-          href="../../public/images/maria-cunha-resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          download
-        >
-          Download Resume
-        </a>
-      </div>
-    </section>
-  );
-}
+    return (
+      <section style={{ padding: '30px' }}>
+          <h3>Resume</h3>
+          <div style={{ marginBottom: '20px' }}>
+              <a
+                  href="../../public/images/maria-cunha-resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download
+              >
+                  Download My Resume
+              </a>
+          </div>
+          <h4>Front-end Proficiencies</h4>
+              <ul>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>JQuery</li>
+                  <li>Responsive design</li>
+                  <li>React</li>
+                  <li>Bootstrap</li>
+              </ul>
+          <h4>Back-end Proficiencies</h4>
+              <ul>
+                  <li>APIs</li>
+                  <li>Node</li>
+                  <li>Express</li>
+                  <li>MySQL, Sequelize</li>
+                  <li>MongoDB, Mongoose</li>
+                  <li>REST</li>
+                  <li>GraphQL</li>
+              </ul>
+      </section>
+    );
+  }
 
 export default Resume;

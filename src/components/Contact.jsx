@@ -1,29 +1,24 @@
 import React, { useState } from 'react';
-
 function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
-
   const [errors, setErrors] = useState({
     name: false,
     email: false,
     message: false,
   });
-
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
-
   const validateEmail = (email) => {
     // Email validation using regular expression
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
   };
-
   const handleSubmit = (event) => {
     event.preventDefault();
     // Check for required fields and valid email
@@ -41,16 +36,14 @@ function Contact() {
     }
     setErrors(errors);
 
-    // Submit the form if no errors
     if (!errors.name && !errors.email && !errors.message) {
-      // Handle form submission here (e.g., send data to the server)
       console.log('Form submitted:', formData);
     }
   };
 
   return (
-    <section>
-      <h3>Contact</h3>
+    <section style={{ padding: '30px' }}>
+      <h3 style={{ paddingBottom: '10px' }}>Contact</h3>
       <form className="form-horizontal" onSubmit={handleSubmit}>
         <div className={`form-group ${errors.name ? 'has-error' : ''}`}>
           <label className="control-label col-sm-2" htmlFor="name">
@@ -65,6 +58,7 @@ function Contact() {
               placeholder="Enter name"
               value={formData.name}
               onChange={handleChange}
+              style={{ marginBottom: '10px' }}
             />
             {errors.name && <span className="help-block">Name is required</span>}
           </div>
@@ -82,6 +76,7 @@ function Contact() {
               placeholder="Enter email address"
               value={formData.email}
               onChange={handleChange}
+              style={{ marginBottom: '10px' }}
             />
             {errors.email && <span className="help-block">Email is required</span>}
           </div>
@@ -95,12 +90,13 @@ function Contact() {
             name="message"
             value={formData.message}
             onChange={handleChange}
+            style={{ marginBottom: '10px' }}
           ></textarea>
           {errors.message && <span className="help-block">Message is required</span>}
         </div>
         <div className="form-group">
           <div className="col-sm-offset-2 col-sm-10">
-            <button type="submit" className="btn btn-default">
+            <button type="submit" className="btn btn-primary">
               Submit
             </button>
           </div>
@@ -109,5 +105,4 @@ function Contact() {
     </section>
   );
 }
-
 export default Contact;

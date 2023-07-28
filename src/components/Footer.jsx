@@ -5,7 +5,6 @@ function Footer() {
   return (
     <div className="footer-wrapper">
       <footer className="Footer">
-        <h5 style={{ fontSize: '14px' }}>Created by Maria Cunha, 2023.</h5>
         <div className="social-links">
           <a
             href="https://www.linkedin.com/in/mariabagliencunha/"
@@ -22,6 +21,7 @@ function Footer() {
             <FaGithub size={48} style={{ color: '#808080' }} />
           </a>
         </div>
+        <h5 style={{ fontSize: '14px' }}>Created by Maria Cunha, 2023.</h5>
       </footer>
     </div>
   );

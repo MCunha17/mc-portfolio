@@ -2,8 +2,8 @@ import Project from './Project';
 
 function Portfolio() {
   return (
-    <section>
-      <h2>My Portfolio</h2>
+    <section style={{ padding: '30px' }}>
+      <h3 style={{ paddingBottom: '10px' }}>My Portfolio</h3>
       <div className="projects">
         <Project
           title="EcoPaw Tracker"

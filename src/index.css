@@ -15,7 +15,6 @@ header {
   }
   .AboutMe, .Portfolio, .Contact {
       flex-direction: column;
-      padding-left: 30px;
   }
   .Contact > div {
       padding-right: 25px;
