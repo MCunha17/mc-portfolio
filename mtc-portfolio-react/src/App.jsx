@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Container } from 'react-bootstrap';
 import './App.css';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
@@ -32,8 +31,8 @@ function App() {
   }
 
   return (
-    <Container>
-      <div className="Header d-flex flex-wrap position-relative mx-1" style={{backgroundImage: "url('/assets/images/header-image.jpg')", height: "200px"}}>
+    <>
+      <div className="Header d-flex flex-wrap position-relative mx-1" style={{backgroundImage: "url('/assets/images/header-image.jpg')", height: "125px"}}>
         <Header />
         <nav className="Navigation position-absolute d-flex flex-wrap justify-content-end align-items-center py-1 pr-1" style={{right: 0, top: 0}}>
           <Navigation selectSection={setSelectedSection} selectedSection={selectedSection} />
@@ -41,7 +40,7 @@ function App() {
       </div>
       {section}
       <Footer />
-    </Container>
+    </>
   );
 }
 

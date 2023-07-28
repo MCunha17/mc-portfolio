@@ -1,8 +1,9 @@
 .Header {
   height: 200px;
-  margin: 11px;
-  background-size: cover;
-  background-repeat: no-repeat;
+  padding-top: 20px;
+  padding-left: 15px;
+    background-color: black;
+  color: white;
 }
 
 #subtitle {
@@ -11,12 +12,13 @@
 }
 
 .Navigation ul {
+  padding-top: 20px;
+  padding-right: 15px;
   margin: 0;
-  padding: 0;
 }
 
 .Navigation ul li {
-  margin: 0 15px;
+  margin-right: 20px;
 }
 
 .Navigation ul li a {
@@ -24,6 +26,7 @@
 }
 
 .About, .Portfolio {
+  margin-top: 25px;
   padding: 16px;
 }
 
