@@ -2,9 +2,9 @@ function Portfolio() {
     return (
       <div>
         {/* placeholder for portfolio content */}
-        <h2>Portfolio</h2>
+        <h3>Portfolio</h3>
       </div>
     );
   }
   
-  export default Portfolio;  
+export default Portfolio;

@@ -1,42 +1,98 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Header Section Style */
+.Header {
+  background-image: url(/assets/images/header-image.jpg);
+  display:flex;
+  flex-wrap: wrap;
+  position: relative;
+  margin: 11px;
+  height: 200px;
+}
+.Header #subtitle {
+  position: absolute;
+  box-sizing: border-box;
+  max-width: 400px;
+  width: 100%;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px;
+  background: lightblue;
+  text-align: left;
+  font-size: 18px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* Nav Section Style */
+.Navigation {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding-top: 15px;
+  right: 10px;
+  align-items: center;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.Navigation ul {
+  display: flex;
+  flex: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.Navigation ul li {
+  margin: 0 15px;
+}
+.Navigation ul li a {
+ color: white;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* About Section Style */
+.About {
+  display: flex;
+  padding: 16px;
+}
+
+/* Portfolio Section Style */
+.Portfolio {
+  display: flex;
+  padding: 16px;
+}
+
+/* Contact Section Style */
+.Contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  font-size: 24px;
+}
+.Contact > div {
+  padding-right: 75px;
+}
+
+/* Footer Style */
+.Footer {
+  text-align: left;
+  padding: 50px 0 0 100px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .Header {
+      height: 150px;
   }
-  to {
-    transform: rotate(360deg);
+  .Header #subtitle {
+      font-size: 14px;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .Navigation {
+      display: block;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .Navigation ul li a {
+      font-size: 16px;
+  }
+  .About, .Portfolio, .Contact {
+      flex-direction: column;
+  }
+  .Contact > div {
+      padding-right: 25px;
+  }
 }

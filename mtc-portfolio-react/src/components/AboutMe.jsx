@@ -1,9 +1,14 @@
 function AboutMe() {
     return (
-      <div>
-        {/* placeholder for 'About Me' content */}
-        <h2>About Me</h2>
-      </div>
+      <section>
+        <h3>About</h3>
+        {/* About Paragraph */}
+        <div className="bio">
+          <p>
+            {/* Put your bio content here */}
+          </p>
+        </div>
+      </section>
     );
   }
   

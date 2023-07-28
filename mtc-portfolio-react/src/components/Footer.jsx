@@ -1,10 +1,9 @@
 function Footer() {
     return (
       <footer>
-        {/* placeholder for footer content */}
-        <h2>Footer</h2>
+        <h5>Created by Maria Cunha, 2023.</h5>
       </footer>
     );
   }
   
-  export default Footer;  
+export default Footer;  
