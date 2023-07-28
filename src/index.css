@@ -1,12 +1,11 @@
-body {
-  padding: 30px;
+header {
+    padding-left: 30px;
 }
 
 @media only screen and (max-width: 768px) {
 
   .Header {
       height: 125px;
-
   }
   #subtitle {
       font-size: 14px;
@@ -14,8 +13,9 @@ body {
   .Navigation ul li a {
       font-size: 16px;
   }
-  .About, .Portfolio, .Contact {
+  .AboutMe, .Portfolio, .Contact {
       flex-direction: column;
+      padding-left: 30px;
   }
   .Contact > div {
       padding-right: 25px;
