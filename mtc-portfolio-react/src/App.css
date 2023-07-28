@@ -1,98 +1,40 @@
-/* Header Section Style */
 .Header {
-  background-image: url(/assets/images/header-image.jpg);
-  display:flex;
-  flex-wrap: wrap;
-  position: relative;
-  margin: 11px;
   height: 200px;
-}
-.Header #subtitle {
-  position: absolute;
-  box-sizing: border-box;
-  max-width: 400px;
-  width: 100%;
-  bottom: 10px;
-  right: 10px;
-  padding: 10px;
-  background: lightblue;
-  text-align: left;
-  font-size: 18px;
+  margin: 11px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-/* Nav Section Style */
-.Navigation {
-  position: absolute;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  padding-top: 15px;
-  right: 10px;
-  align-items: center;
+#subtitle {
+  font-size: 18px;
+  text-align: left;
 }
+
 .Navigation ul {
-  display: flex;
-  flex: wrap;
-  list-style-type: none;
   margin: 0;
   padding: 0;
 }
+
 .Navigation ul li {
   margin: 0 15px;
 }
+
 .Navigation ul li a {
- color: white;
+  color: white;
 }
 
-/* About Section Style */
-.About {
-  display: flex;
+.About, .Portfolio {
   padding: 16px;
 }
 
-/* Portfolio Section Style */
-.Portfolio {
-  display: flex;
-  padding: 16px;
-}
-
-/* Contact Section Style */
 .Contact {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
   font-size: 24px;
 }
+
 .Contact > div {
   padding-right: 75px;
 }
 
-/* Footer Style */
 .Footer {
-  text-align: left;
   padding: 50px 0 0 100px;
-}
-
-/* Responsive Styles */
-@media only screen and (max-width: 768px) {
-  .Header {
-      height: 150px;
-  }
-  .Header #subtitle {
-      font-size: 14px;
-  }
-  .Navigation {
-      display: block;
-  }
-  .Navigation ul li a {
-      font-size: 16px;
-  }
-  .About, .Portfolio, .Contact {
-      flex-direction: column;
-  }
-  .Contact > div {
-      padding-right: 25px;
-  }
 }

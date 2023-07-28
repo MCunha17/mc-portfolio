@@ -1,31 +1,17 @@
-/* Global Styles */
-body {
-  background-color:#edeef6;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 18px;
-  color: #3e5373;
-}
-
-/* Link Styles */
-a {
-  font-size: 24px;
-  font-weight: bold;
-  color: navy;
-}
-a:hover {
-  color: lightseagreen;
-}
-a:visited {
-  font-weight: bold;
-  color: olive;
-}
-
-/* Responsive Styles */
 @media only screen and (max-width: 768px) {
-  body {
+  .Header {
+      height: 150px;
+  }
+  #subtitle {
       font-size: 14px;
   }
-  a {
+  .Navigation ul li a {
       font-size: 16px;
+  }
+  .About, .Portfolio, .Contact {
+      flex-direction: column;
+  }
+  .Contact > div {
+      padding-right: 25px;
   }
 }
