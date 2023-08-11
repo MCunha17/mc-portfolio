@@ -52,9 +52,8 @@ The following resources were referenced to create this application:
 * React.dev: [Your First Component](https://react.dev/learn/your-first-component)
 * React.dev: [State: A Component's Memory](https://react.dev/learn/state-a-components-memory)
 * React.dev: [Passing Props to a Component](https://react.dev/learn/passing-props-to-a-component)
-* React.dev: [<input>](https://react.dev/reference/react-dom/components/input)
+* React.dev: [input](https://react.dev/reference/react-dom/components/input)
 * React.dev: [Conditional Rendering](https://react.dev/learn/conditional-rendering)
-* React.dev: [<input>](https://react.dev/reference/react-dom/components/input)
 
 ## Questions
 If you have any questions, please visit my GitHub profile [MCunha17](https://github.com/MCunha17) or contact me at cunha.maria.theresa@gmail.com.
