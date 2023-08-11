@@ -1,4 +1,5 @@
 import React from 'react';
+import resume from '../assets/maria-cunha-resume.pdf';
 
 function Resume() {
     return (
@@ -6,7 +7,7 @@ function Resume() {
           <h3>Resume</h3>
           <div style={{ marginBottom: '20px' }}>
               <a
-                  href="../../public/images/maria-cunha-resume.pdf"
+                  href={resume}
                   target="_blank"
                   rel="noopener noreferrer"
                   download

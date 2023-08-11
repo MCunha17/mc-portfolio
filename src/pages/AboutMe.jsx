@@ -1,5 +1,5 @@
 import React from 'react';
-import profilePhoto from '/images/maria-cunha-photo.jpeg';
+import profilePhoto from '../assets/images/maria-cunha-photo.jpeg'
 
 function AboutMe() {
   return (
