@@ -5,12 +5,20 @@ import nosqlSocialApi from '../assets/images/nosql-social-api.png';
 import cmsSiteBlog from '../assets/images/cms-site-blog.png';
 import cmsSiteBackend from '../assets/images/cms-site-backend.png';
 import employeeTracker from '../assets/images/employee-tracker.png';
+import techprep from '../assets/images/techprep-pro.png';
 
 function Portfolio() {
   return (
     <section style={{ padding: '30px' }}>
       <h3 style={{ paddingBottom: '10px' }}>My Portfolio</h3>
       <div className="projects">
+      <Project
+          title="TechPrep Pro"
+          description="Technical job-seeker application with quizzes, flashcards, and other resources."
+          image={techprep}
+          projectLink="https://techprep-pro-4b8ef967b7cd.herokuapp.com/"
+          repoLink="https://github.com/annabellefosburgh/dangerous-wombat"
+        />
         <Project
           title="EcoPaw Tracker"
           description="Carbon emissions calculator based on mode of transportation."
