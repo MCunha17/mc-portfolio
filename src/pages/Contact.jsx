@@ -35,15 +35,26 @@ function Contact() {
       errors.message = true;
     }
     setErrors(errors);
-
+  
     if (!errors.name && !errors.email && !errors.message) {
-      console.log('Form submitted:', formData);
+      // Prepare the data to send in the email
+      const subject = encodeURIComponent("New Message from " + formData.name);
+      const body = encodeURIComponent(`From: ${formData.name} \nEmail: ${formData.email} \nMessage: ${formData.message}`);
+      // Open the user's email client pre-filled with subject and body
+      window.location = `mailto:cunha.maria.theresa@gmail.com?subject=${subject}&body=${body}`;
     }
   };
 
   return (
-    <section style={{ padding: '30px' }}>
-      <h3 style={{ paddingBottom: '10px' }}>Contact</h3>
+    <section style={{ padding: '10px 75px' }}>
+      <h3 style={{
+      paddingTop: '25px',
+      marginBottom: '25px',
+      fontFamily: 'Helvetica, sans-serif', 
+      fontSize: '32px', 
+      fontWeight: 'bold', 
+      color: '#ffffff',
+      }}>CONTACT</h3>
       <form className="form-horizontal" onSubmit={handleSubmit}>
         <div className={`form-group ${errors.name ? 'has-error' : ''}`}>
           <label className="control-label col-sm-2" htmlFor="name">
@@ -82,7 +93,7 @@ function Contact() {
           </div>
         </div>
         <div className={`form-group ${errors.message ? 'has-error' : ''}`}>
-          <label htmlFor="message">Message:</label>
+        <label htmlFor="message" style={{ color: 'white', fontFamily: 'Helvetica', fontSize: '16px' }}>Message:</label>
           <textarea
             className="form-control"
             rows="5"
@@ -96,7 +107,7 @@ function Contact() {
         </div>
         <div className="form-group">
           <div className="col-sm-offset-2 col-sm-10">
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="submit">
               Submit
             </button>
           </div>

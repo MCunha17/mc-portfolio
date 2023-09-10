@@ -11,42 +11,45 @@ function Navigation({ selectSection, selectedSection }) {
   };
 
   return (
-    <nav>
-      <ul className="d-flex list-unstyled">
-        <li>
+    <nav className="nav-container">
+      <ul className="d-flex list-unstyled nav-list">
+        <li className="nav-item">
           <button
             type="button"
-            className={`btn ${selected === 'About Me' ? 'btn-primary' : 'btn-light'}`}
+            className={`btn nav-button ${selected === 'About Me' ? 'btn-primary' : 'btn-light'}`}
             onClick={() => handleButtonClick('About Me')}
           >
-            About
+            ABOUT
           </button>
         </li>
-        <li>
+        <li className="nav-item dropdown">
           <button
             type="button"
-            className={`btn ${selected === 'Portfolio' ? 'btn-primary' : 'btn-light'}`}
-            onClick={() => handleButtonClick('Portfolio')}
+            className={`btn nav-button ${selected.includes('Portfolio') ? 'btn-primary' : 'btn-light'}`}
           >
-            Work
+            PORTFOLIO
           </button>
+          <div className="dropdown-content">
+            <button className="dropdown-item" onClick={() => handleButtonClick('Dev Portfolio')}>DEV PROJECTS</button>
+            <button className="dropdown-item" onClick={() => handleButtonClick('Marketing Portfolio')}>MARKETING PROJECTS</button>
+          </div>
         </li>
-        <li>
+        <li className="nav-item">
           <button
             type="button"
-            className={`btn ${selected === 'Contact' ? 'btn-primary' : 'btn-light'}`}
+            className={`btn nav-button ${selected === 'Contact' ? 'btn-primary' : 'btn-light'}`}
             onClick={() => handleButtonClick('Contact')}
           >
-            Contact
+            CONTACT
           </button>
         </li>
-        <li>
+        <li className="nav-item">
           <button
             type="button"
-            className={`btn ${selected === 'Resume' ? 'btn-primary' : 'btn-light'}`}
+            className={`btn nav-button ${selected === 'Resume' ? 'btn-primary' : 'btn-light'}`}
             onClick={() => handleButtonClick('Resume')}
           >
-            Resume
+            RESUME
           </button>
         </li>
       </ul>
