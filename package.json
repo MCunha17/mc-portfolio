@@ -12,7 +12,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://www.marcunhamarketing.com",
+  "homepage": "https://www.marcunhamarketing.com/",
   "dependencies": {
     "bootstrap": "^5.3.1",
     "react": "^18.2.0",
