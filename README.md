@@ -56,4 +56,4 @@ The following resources were referenced to create this application:
 * React.dev: [Conditional Rendering](https://react.dev/learn/conditional-rendering)
 
 ## Questions
-If you have any questions, please visit my GitHub profile [MCunha17](https://github.com/MCunha17) or contact me at cunha.maria.theresa@gmail.com.
+If you have any questions, please visit my GitHub profile [MCunha17](https://github.com/MCunha17) or contact me at cunha.maria.theresa@gmail.com
