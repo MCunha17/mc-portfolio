@@ -43,7 +43,7 @@ function MarketingPortfolio() {
           projectLink="https://drive.google.com/file/d/1zox6XvR-rkKOisygSLWAi61BzGpKZnnB/view"
         />
         <MarketingProject
-          title="Effective Launch Communication for Media Activation Product"
+          title="UPDATE_Effective Launch Communication for Media Activation Product"
           description="Using Salesforce Marketing Cloud, I crafted and delivered a powerful launch message that reintroduced a Media Activation Product to its users. The message emphasized its growth, evolution, and new three-component system, which enhances the software's functionality and user experience. The message was delivered with a clear call-to-action, encouraging users to familiarize themselves with the new structure and positioning, ultimately driving user engagement."
           image={launch}
           projectLink="https://drive.google.com/file/d/1317aanO-c6eWjetwmYPfmsj1qNbQMRnl/view"
