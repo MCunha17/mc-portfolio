@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/mc-portfolio/static/css/main.0fbf99ac.css",
+    "main.js": "/mc-portfolio/static/js/main.02ba7e72.js",
+    "static/media/sizzle-reel.png": "/mc-portfolio/static/media/sizzle-reel.e90cb37598697f3b7bc6.png",
+    "static/media/user-guide.png": "/mc-portfolio/static/media/user-guide.dc2fd836bfcbe7a5c903.png",
+    "static/media/employee-tracker.png": "/mc-portfolio/static/media/employee-tracker.84a74206edcee89203bc.png",
+    "static/media/one-sheet.png": "/mc-portfolio/static/media/one-sheet.c6d96656a0b2f09854b0.png",
+    "static/media/nosql-social-api.png": "/mc-portfolio/static/media/nosql-social-api.173df2de0805d77c5bb1.png",
+    "static/media/whitepaper.png": "/mc-portfolio/static/media/whitepaper.012d198f914a981a0078.png",
+    "static/media/regex-tutorial.png": "/mc-portfolio/static/media/regex-tutorial.a320750ef61d63ffc6ab.png",
+    "static/media/case-study.png": "/mc-portfolio/static/media/case-study.babe7e774904c59de998.png",
+    "static/media/slideware.png": "/mc-portfolio/static/media/slideware.2b242385f0f8d39474b0.png",
+    "static/media/logo-generator.png": "/mc-portfolio/static/media/logo-generator.dbe3311c5b9322ad92de.png",
+    "static/media/competitive-comparison.png": "/mc-portfolio/static/media/competitive-comparison.2dbcff845135d16f06ec.png",
+    "static/media/cms-site-backend.png": "/mc-portfolio/static/media/cms-site-backend.33ca964402adf73168f3.png",
+    "static/media/launch-communication.png": "/mc-portfolio/static/media/launch-communication.8ee64c507ee5809adc75.png",
+    "static/media/email-onboarding.png": "/mc-portfolio/static/media/email-onboarding.4f7f7048b5bd550659aa.png",
+    "static/media/cms-site-blog.png": "/mc-portfolio/static/media/cms-site-blog.4868035418c7012f8a62.png",
+    "static/media/ecopaw-tracker.png": "/mc-portfolio/static/media/ecopaw-tracker.0904d61cc2608722fca1.png",
+    "static/media/text-editor.png": "/mc-portfolio/static/media/text-editor.dd7b43c9c68f6fb5f29a.png",
+    "static/media/email-marketing.png": "/mc-portfolio/static/media/email-marketing.93c543b8ccee6cd687c8.png",
+    "static/media/weather-dashboard.png": "/mc-portfolio/static/media/weather-dashboard.caaaae0ff466528eb630.png",
+    "static/media/use-cases.png": "/mc-portfolio/static/media/use-cases.67ba372508cdc8d9d59a.png",
+    "static/media/maria-cunha-resume.pdf": "/mc-portfolio/static/media/maria-cunha-resume.ea397f5e0e31333555f3.pdf",
+    "static/media/release-notes.png": "/mc-portfolio/static/media/release-notes.ae8ba317222d11f19f00.png",
+    "static/media/password-generator.png": "/mc-portfolio/static/media/password-generator.b988891c064ebcadc882.png",
+    "static/media/js-coding-quiz.png": "/mc-portfolio/static/media/js-coding-quiz.b02aa32d3c6e0893f91c.png",
+    "static/media/workday-scheduler.png": "/mc-portfolio/static/media/workday-scheduler.972833f05f627ce7e0c8.png",
+    "static/media/note-taker.png": "/mc-portfolio/static/media/note-taker.37ca75e7fe35a513b9bd.png",
+    "static/media/techprep-pro.png": "/mc-portfolio/static/media/techprep-pro.9aabe1b80aefd19c3313.png",
+    "static/media/survey.png": "/mc-portfolio/static/media/survey.a4124b0c4067f0bfdbe9.png",
+    "static/media/maria-cunha-photo.jpeg": "/mc-portfolio/static/media/maria-cunha-photo.8906c04541db184b1646.jpeg",
+    "index.html": "/mc-portfolio/index.html",
+    "main.0fbf99ac.css.map": "/mc-portfolio/static/css/main.0fbf99ac.css.map",
+    "main.02ba7e72.js.map": "/mc-portfolio/static/js/main.02ba7e72.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0fbf99ac.css",
+    "static/js/main.02ba7e72.js"
+  ]
+}
