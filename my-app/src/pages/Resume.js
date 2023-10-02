@@ -18,10 +18,12 @@ function Resume() {
                   target="_blank"
                   rel="noopener noreferrer"
                   download
+                  style={{ color: '#7AB988' }}
               >
                   Download My Resume
               </a>
           </div>
+          { /*
           <h4 className='proficiency-heading'>Front-end Proficiencies</h4>
               <ul className='proficiency-list'>
                   <li>HTML</li>
@@ -42,6 +44,7 @@ function Resume() {
                   <li>REST</li>
                   <li>GraphQL</li>
               </ul>
+            */ }
       </section>
     );
   }

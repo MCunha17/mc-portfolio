@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Project({ title, description, image, projectLink, repoLink }) {
+function Project({ image, title, description, projectLink, repoLink, technologies }) {
   return (
     <div className="card">
       <img className="card-img-top" src={image} alt="Card image"/>

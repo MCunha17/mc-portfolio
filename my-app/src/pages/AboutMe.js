@@ -2,7 +2,13 @@ import React from 'react';
 import profilePhoto from '../assets/images/maria-cunha-photo.jpeg';
 import '../App.css';
 
-function AboutMe() {
+function AboutMe({ setSelectedSection }) {
+  // State to track which button was clicked
+
+  const handleButtonClick = (sectionName) => {
+    setSelectedSection(sectionName);
+  };
+
   return (
     <section style={{ padding: '30px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
       <div
@@ -38,6 +44,10 @@ function AboutMe() {
                 width: '75%',
                 flex: '0.25',
                 borderRadius: '50%',
+                minWidth: '225px',
+                minHeight: '225px',
+                maxWidth: '225px',
+                maxHeight: '225px',
               }}
             />
             <div
@@ -58,10 +68,10 @@ function AboutMe() {
             <p className="hello">Hello</p>
             {/* Buttons */}
             <div className="button-group">
-              <button className="button-1">Marketing Work</button>
-              <button className="button-2">Dev Work</button>
+              <button className="button-1" onClick={() => handleButtonClick('Marketing Portfolio')}>Marketing Work</button>
+              <button className="button-2" onClick={() => handleButtonClick('Dev Portfolio')}>Dev Work</button>
             </div>
-            <p className="summary">Solutions evangelist with 10+ years of marketing experience and a strong grasp of development fundamentals, eager to contribute creativity, passion, and specialized knowledge in an entrepreneurial team environment. My understanding of how products function at a technical level empowers me to market them more effectively, bridging the gaps between development, sales, and end users.</p>
+            <p className="summary">Solutions evangelist with 10+ years of marketing experience and a solid coding background, eager to contribute creativity, passion, and specialized knowledge in an entrepreneurial team environment. My dual expertise in marketing and development provides a unique perspective that empowers me to understand products at a technical level. This enables me to market them more effectively, bridging the gaps between development, sales, and end users.</p>
             {/* Email */}
             <a href="mailto:cunha.maria.theresa@gmail.com" className="email-link">cunha.maria.theresa@gmail.com</a>
           </div>

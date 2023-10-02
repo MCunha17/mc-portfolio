@@ -30,11 +30,11 @@ function Navigation({ selectSection, selectedSection }) {
             PORTFOLIO
           </button>
           <div className="dropdown-content">
-            <button className="dropdown-item" onClick={() => handleButtonClick('Dev Portfolio')}>DEV PROJECTS</button>
             <button className="dropdown-item" onClick={() => handleButtonClick('Marketing Portfolio')}>MARKETING PROJECTS</button>
+            <button className="dropdown-item" onClick={() => handleButtonClick('Dev Portfolio')}>DEV PROJECTS</button>
           </div>
         </li>
-        <li className="nav-item">
+        { /* <li className="nav-item">
           <button
             type="button"
             className={`btn nav-button ${selected === 'Contact' ? 'btn-primary' : 'btn-light'}`}
@@ -43,6 +43,7 @@ function Navigation({ selectSection, selectedSection }) {
             CONTACT
           </button>
         </li>
+        */ }
         <li className="nav-item">
           <button
             type="button"

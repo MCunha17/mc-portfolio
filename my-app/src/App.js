@@ -16,7 +16,7 @@ function App() {
 
   switch(selectedSection) {
     case 'About Me':
-      section = <AboutMe />;
+      section = <AboutMe setSelectedSection={setSelectedSection} />;
       break;
     case 'Dev Portfolio':
       section = <Portfolio />;
@@ -35,16 +35,18 @@ function App() {
   }
 
   return (
-    <div style={{ backgroundColor: '#0B5351' }}>
+    <div className="app-background">
       <div className="Header d-flex flex-wrap position-relative mx-1" style={{backgroundImage: "url('/assets/images/header-image.jpg')", height: "100px"}}>
         <Header />
         <nav className="Navigation position-absolute d-flex flex-wrap align-items-center py-1 pl-1" style={{left: 25, top: 0, bottom: 0}}>
-        <Navigation selectSection={setSelectedSection} selectedSection={selectedSection} />
-      </nav>
+          <Navigation selectSection={setSelectedSection} selectedSection={selectedSection} />
+        </nav>
       </div>
-      {section}
+      <div className="main-content">
+        {section}
+      </div>
       <Footer />
-      </div>
+    </div>
   );
 }
 
