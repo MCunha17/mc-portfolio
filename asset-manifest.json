@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mc-portfolio/static/css/main.0fbf99ac.css",
-    "main.js": "/mc-portfolio/static/js/main.02ba7e72.js",
+    "main.js": "/mc-portfolio/static/js/main.58ef04fc.js",
     "static/media/sizzle-reel.png": "/mc-portfolio/static/media/sizzle-reel.e90cb37598697f3b7bc6.png",
     "static/media/user-guide.png": "/mc-portfolio/static/media/user-guide.dc2fd836bfcbe7a5c903.png",
     "static/media/employee-tracker.png": "/mc-portfolio/static/media/employee-tracker.84a74206edcee89203bc.png",
@@ -33,10 +33,10 @@
     "static/media/maria-cunha-photo.jpeg": "/mc-portfolio/static/media/maria-cunha-photo.8906c04541db184b1646.jpeg",
     "index.html": "/mc-portfolio/index.html",
     "main.0fbf99ac.css.map": "/mc-portfolio/static/css/main.0fbf99ac.css.map",
-    "main.02ba7e72.js.map": "/mc-portfolio/static/js/main.02ba7e72.js.map"
+    "main.58ef04fc.js.map": "/mc-portfolio/static/js/main.58ef04fc.js.map"
   },
   "entrypoints": [
     "static/css/main.0fbf99ac.css",
-    "static/js/main.02ba7e72.js"
+    "static/js/main.58ef04fc.js"
   ]
 }
