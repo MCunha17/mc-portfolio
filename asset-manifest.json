@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mc-portfolio/static/css/main.0fbf99ac.css",
-    "main.js": "/mc-portfolio/static/js/main.58ef04fc.js",
+    "main.js": "/mc-portfolio/static/js/main.2c0e6606.js",
     "static/media/sizzle-reel.png": "/mc-portfolio/static/media/sizzle-reel.e90cb37598697f3b7bc6.png",
     "static/media/user-guide.png": "/mc-portfolio/static/media/user-guide.dc2fd836bfcbe7a5c903.png",
     "static/media/employee-tracker.png": "/mc-portfolio/static/media/employee-tracker.84a74206edcee89203bc.png",
@@ -22,7 +22,7 @@
     "static/media/email-marketing.png": "/mc-portfolio/static/media/email-marketing.93c543b8ccee6cd687c8.png",
     "static/media/weather-dashboard.png": "/mc-portfolio/static/media/weather-dashboard.caaaae0ff466528eb630.png",
     "static/media/use-cases.png": "/mc-portfolio/static/media/use-cases.67ba372508cdc8d9d59a.png",
-    "static/media/maria-cunha-resume.pdf": "/mc-portfolio/static/media/maria-cunha-resume.ea397f5e0e31333555f3.pdf",
+    "static/media/maria-cunha-resume.pdf": "/mc-portfolio/static/media/maria-cunha-resume.989378be758638fb7d70.pdf",
     "static/media/release-notes.png": "/mc-portfolio/static/media/release-notes.ae8ba317222d11f19f00.png",
     "static/media/password-generator.png": "/mc-portfolio/static/media/password-generator.b988891c064ebcadc882.png",
     "static/media/js-coding-quiz.png": "/mc-portfolio/static/media/js-coding-quiz.b02aa32d3c6e0893f91c.png",
@@ -33,10 +33,10 @@
     "static/media/maria-cunha-photo.jpeg": "/mc-portfolio/static/media/maria-cunha-photo.8906c04541db184b1646.jpeg",
     "index.html": "/mc-portfolio/index.html",
     "main.0fbf99ac.css.map": "/mc-portfolio/static/css/main.0fbf99ac.css.map",
-    "main.58ef04fc.js.map": "/mc-portfolio/static/js/main.58ef04fc.js.map"
+    "main.2c0e6606.js.map": "/mc-portfolio/static/js/main.2c0e6606.js.map"
   },
   "entrypoints": [
     "static/css/main.0fbf99ac.css",
-    "static/js/main.58ef04fc.js"
+    "static/js/main.2c0e6606.js"
   ]
 }
