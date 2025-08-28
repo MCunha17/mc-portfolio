@@ -1,126 +1,145 @@
+/* Header */
 .Header {
-    min-height: 125px;
-    background-color: white;
-    color: #477E7C;
-}
-
-/* Navigation styles */
-.nav-container {
-    text-align: left;
-    min-height: 125px;
-    padding: 10px 0;
-}
-  
-.nav-list {
+    min-height: 80px;
+    background-color: #121212; /* dark bar */
+    color: #ffffff;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 0;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #2a2a2a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  /* Header content wrapper */
+  .header-bar {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+  }
+  
+  /* Left side text */
+  .header-left h1 {
     margin: 0;
-}
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #ffffff;
+  }
   
-.nav-item {
+  .header-left p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #b3b3b3;
+  }
+  
+  /* Navigation */
+  .nav-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    margin: 0;
+    padding: 0;
     list-style: none;
-    margin: 0 15px;
-}
+  }
   
-.nav-button {
-    cursor: pointer;
-}
-  
-/* Styles for dropdown */
-.dropdown {
+  .nav-item {
     position: relative;
-}
+  }
   
-.dropdown-content {
-    display: none;
+  /* Nav buttons */
+  .nav-button {
+    background: transparent;
+    border: none;
+    color: #b3b3b3;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+  }
+  
+  .nav-button:hover {
+    color: #ffffff;
+    background-color: #2a2a2a;
+  }
+  
+  .nav-button.active {
+    color: #ffffff;
+    background-color: #333333;
+  }
+  
+  /* === Dropdown === */
+  .dropdown-content {
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 1;
-    font-family: 'Helvetica', sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-}
-  
-.dropdown:hover .dropdown-content {
-    display: block;
-    color: #7AB988;
-}
-
-/* Nav button styles */
-.btn-primary {
-    background-color: white;
-    color: #477E7C;
-    border: none;
-    font-family: 'Helvetica', sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.btn-primary:hover {
-    background-color: white;
-    color: #7AB988;
-}
-
-.btn-primary:focus {
-    background-color: lightgray;
-    outline: none;
-    box-shadow: none;
-}
-
-.btn-primary:active {
-    background-color: white;
-    color: #0B5351;
-    outline: none;
-    box-shadow: none;
-}
-
-.btn-light {
-    background-color: white;
-    color: #477E7C;
-    border: none;
-    font-family: 'Helvetica', sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.btn-light:hover {
-    background-color: white;
-    color: #7AB988;
+    background: #1e1e1e;
+    border: 1px solid #2a2a2a;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
   }
-
-.btn-light:focus {
-    background-color: lightgray;
-    outline: none;
-    box-shadow: none;
-}
-
-.btn-light:active {
-    background-color: white;
-    color: #0B5351;
-    outline: none;
-    box-shadow: none;
-}
   
-
-@media only screen and (max-width: 768px) {
+  .dropdown-item {
+    background: transparent;
+    border: none;
+    color: #b3b3b3;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #2a2a2a;
+    color: #ffffff;
+  }
+  
+  /* === Mobile Responsiveness === */
+  @media (max-width: 768px) {
     .Header {
-      height: 125px;
+      min-height: 70px;
     }
-    #subtitle {
-      font-size: 14px;
-    }
-    .Navigation ul li a {
-      font-size: 16px;
-    }
-    .AboutMe,
-    .Portfolio,
-    .Contact {
+  
+    .header-bar {
       flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
     }
-    .Contact > div {
-      padding-right: 25px;
+  
+    .nav-list {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
     }
-}
+  
+    .dropdown-content {
+      position: static;
+      border: none;
+      box-shadow: none;
+      margin: 0.25rem 0 0;
+      width: 100%;
+    }
+  
+    .dropdown-item {
+      width: 100%;
+      text-align: left;
+    }
+  }  

@@ -1,70 +1,71 @@
 import React from 'react';
-import profilePhoto from '../assets/images/maria-cunha-photo.jpeg';
+import profilePhoto from '../assets/images/maria-cunha-photo.jpg';
 import '../App.css';
 
-function AboutMe() {
+function AboutMe({ selectSection }) {
   return (
-    <section style={{ padding: '30px', display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
-      <div
-        style={{
-          padding: '30px',
-          borderRadius: '10px',
-          width: '80%',
-        }}
-      >
-        <div
-          style={{
-            display: 'flex',
-            marginBottom: '10px',
-          }}
-        >
-          {/* Photo Box */}
-          <div
-            style={{
-              width: '300px',
-              padding: '30px',
-              backgroundColor: 'white',
-              flex: '1',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              borderBottom: '25px solid #7AB988',
-            }}
-          >
-            <img
-              src={profilePhoto}
-              alt="Profile Photo"
-              style={{
-                width: '75%',
-                flex: '0.25',
-                borderRadius: '50%',
-              }}
-            />
-            <div
-              style={{
-                flex: '0.75',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-              }}
+    <section className="about-section">
+      <div className="about-content">
+        {/* Profile card */}
+        <div className="photo-card">
+          <img
+            src={profilePhoto}
+            alt="Profile of Maria Cunha"
+            loading="lazy"
+            decoding="async"
+          />
+          <p className="name">Maria Cunha</p>
+          <hr className="horizontal-line" />
+          <p className="position">CUSTOMER-CENTRIC STORYTELLER</p>
+        </div>
+
+        {/* Text content */}
+        <div className="text-box">
+          <p className="hello">Hello</p>
+
+          {/* Buttons */}
+          <div className="button-group">
+            <button
+              className="button-1"
+              onClick={() => selectSection('Marketing Portfolio')}
             >
-              <p className="center-align name" style={{ margin: 0 }}>Maria Cunha</p>
-              <hr className="horizontal-line" />
-              <p className="center-align position" style={{ margin: 0 }}>MARKETER</p>
-            </div>
+              Marketing Work
+            </button>
+            <button
+              className="button-2"
+              onClick={() => selectSection('Dev Portfolio')}
+            >
+              Dev Work
+            </button>
           </div>
-          {/* Text Box */}
-          <div className="text-box">
-            <p className="hello">Hello</p>
-            {/* Buttons */}
-            <div className="button-group">
-              <button className="button-1">Marketing Work</button>
-              <button className="button-2">Dev Work</button>
-            </div>
-            <p className="summary">Solutions evangelist with 10+ years of marketing experience and a strong grasp of development fundamentals, eager to contribute creativity, passion, and specialized knowledge in an entrepreneurial team environment. My understanding of how products function at a technical level empowers me to market them more effectively, bridging the gaps between development, sales, and end users.</p>
-            {/* Email */}
-            <a href="mailto:cunha.maria.theresa@gmail.com" className="email-link">cunha.maria.theresa@gmail.com</a>
-          </div>
+
+          {/* Summary */}
+          <p className="summary"> I’m a senior marketing leader with 12+ years of experience in SaaS, media technology, and communications. I specialize in building impactful go-to-market strategies and driving unified brand positioning. I’ve led launches, guided cross-functional teams, and partnered with global leaders like Google, Meta, and Amazon. With a strong technical foundation—from digital development to AI-enabled campaigns, I translate complex ideas into compelling stories that fuel adoption, growth, and alignment across global stakeholders.
+          </p>
+
+          {/* Email */}
+          <a
+            href="mailto:cunha.maria.theresa@gmail.com"
+            className="email-link"
+          >
+            cunha.maria.theresa@gmail.com
+          </a>
+        </div>
+      </div>
+
+      {/* Glance cards */}
+      <div className="glance">
+        <div className="glance-card">
+          <span className="glance-label">Experience</span>
+          <span className="glance-value">12+ years</span>
+        </div>
+        <div className="glance-card">
+          <span className="glance-label">Strategic Partnerships</span>
+          <span className="glance-value">Google · Meta · Amazon</span>
+        </div>
+        <div className="glance-card">
+          <span className="glance-label">Business Impact</span>
+          <span className="glance-value">$1B+ in wins enabled</span>
         </div>
       </div>
     </section>

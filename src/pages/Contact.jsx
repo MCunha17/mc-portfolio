@@ -1,119 +1,146 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+
 function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
+    name: "",
+    email: "",
+    message: "",
   });
-  const [errors, setErrors] = useState({
-    name: false,
-    email: false,
-    message: false,
-  });
+
+  const [errors, setErrors] = useState({});
+  const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
+
   const validateEmail = (email) => {
-    // Email validation using regular expression
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
   };
-  const handleSubmit = (event) => {
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Check for required fields and valid email
-    const errors = {};
-    if (!formData.name.trim()) {
-      errors.name = true;
-    }
+
+    const newErrors = {};
+    if (!formData.name.trim()) newErrors.name = true;
     if (!formData.email.trim()) {
-      errors.email = true;
+      newErrors.email = true;
     } else if (!validateEmail(formData.email)) {
-      errors.email = 'Invalid email format';
+      newErrors.email = "Invalid email format";
     }
-    if (!formData.message.trim()) {
-      errors.message = true;
-    }
-    setErrors(errors);
-  
-    if (!errors.name && !errors.email && !errors.message) {
-      // Prepare the data to send in the email
-      const subject = encodeURIComponent("New Message from " + formData.name);
-      const body = encodeURIComponent(`From: ${formData.name} \nEmail: ${formData.email} \nMessage: ${formData.message}`);
-      // Open the user's email client pre-filled with subject and body
-      window.location = `mailto:cunha.maria.theresa@gmail.com?subject=${subject}&body=${body}`;
+    if (!formData.message.trim()) newErrors.message = true;
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length === 0) {
+      setLoading(true);
+      setStatus("");
+
+      try {
+        const response = await fetch("https://formspree.io/f/mgvlvzqq", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+          setStatus("Message sent successfully!");
+          setFormData({ name: "", email: "", message: "" });
+        } else {
+          setStatus("Oops! Something went wrong. Please try again.");
+        }
+      } catch (error) {
+        setStatus("Oops! Something went wrong. Please try again.");
+      } finally {
+        setLoading(false);
+      }
     }
   };
 
   return (
-    <section style={{ padding: '10px 75px' }}>
-      <h3 style={{
-      paddingTop: '25px',
-      marginBottom: '25px',
-      fontFamily: 'Helvetica, sans-serif', 
-      fontSize: '32px', 
-      fontWeight: 'bold', 
-      color: '#ffffff',
-      }}>CONTACT</h3>
-      <form className="form-horizontal" onSubmit={handleSubmit}>
-        <div className={`form-group ${errors.name ? 'has-error' : ''}`}>
-          <label className="control-label col-sm-2" htmlFor="name">
+    <section className="page-section">
+      <h3 className="contact-title">CONTACT</h3>
+      <form className="contact-form" onSubmit={handleSubmit}>
+        {/* Name */}
+        <div className="form-group">
+          <label className="control-label" htmlFor="name">
             Name:
           </label>
-          <div className="col-sm-10">
-            <input
-              type="text"
-              className="form-control"
-              id="name"
-              name="name"
-              placeholder="Enter name"
-              value={formData.name}
-              onChange={handleChange}
-              style={{ marginBottom: '10px' }}
-            />
-            {errors.name && <span className="help-block">Name is required</span>}
-          </div>
+          <input
+            type="text"
+            className="form-input"
+            id="name"
+            name="name"
+            placeholder="Enter name"
+            value={formData.name}
+            onChange={handleChange}
+          />
+          {errors.name && <span className="help-block">Name is required</span>}
         </div>
-        <div className={`form-group ${errors.email ? 'has-error' : ''}`}>
-          <label className="control-label col-sm-2" htmlFor="email">
+
+        {/* Email */}
+        <div className="form-group">
+          <label className="control-label" htmlFor="email">
             Email Address:
           </label>
-          <div className="col-sm-10">
-            <input
-              type="email"
-              className="form-control"
-              id="email"
-              name="email"
-              placeholder="Enter email address"
-              value={formData.email}
-              onChange={handleChange}
-              style={{ marginBottom: '10px' }}
-            />
-            {errors.email && <span className="help-block">Email is required</span>}
-          </div>
+          <input
+            type="email"
+            className="form-input"
+            id="email"
+            name="email"
+            placeholder="Enter email address"
+            value={formData.email}
+            onChange={handleChange}
+          />
+          {errors.email && (
+            <span className="help-block">
+              {errors.email === true ? "Email is required" : errors.email}
+            </span>
+          )}
         </div>
-        <div className={`form-group ${errors.message ? 'has-error' : ''}`}>
-        <label htmlFor="message" style={{ color: 'white', fontFamily: 'Helvetica', fontSize: '16px' }}>Message:</label>
+
+        {/* Message */}
+        <div className="form-group">
+          <label className="control-label" htmlFor="message">
+            Message:
+          </label>
           <textarea
-            className="form-control"
+            className="form-input"
             rows="5"
             id="message"
             name="message"
+            placeholder="Enter your message"
             value={formData.message}
             onChange={handleChange}
-            style={{ marginBottom: '10px' }}
-          ></textarea>
-          {errors.message && <span className="help-block">Message is required</span>}
+          />
+          {errors.message && (
+            <span className="help-block">Message is required</span>
+          )}
         </div>
+
+        {/* Submit button */}
         <div className="form-group">
-          <div className="col-sm-offset-2 col-sm-10">
-            <button type="submit" className="submit">
-              Submit
-            </button>
-          </div>
+          <button type="submit" className="contact-submit" disabled={loading}>
+            {loading ? "Sending..." : "Send"}
+          </button>
         </div>
+
+        {/* Status message */}
+        {status && (
+          <p
+            className={`form-status ${
+              status.includes("success") ? "success" : "error"
+            }`}
+          >
+            {status}
+          </p>
+        )}
       </form>
     </section>
   );
 }
+
 export default Contact;

@@ -1,55 +1,69 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function Navigation({ selectSection, selectedSection }) {
-  // State to track the selected section
-  const [selected, setSelected] = useState(selectedSection);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  // Function to handle button click and update the selected section
-  const handleButtonClick = (section) => {
-    setSelected(section);
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleSelect = (section) => {
     selectSection(section);
+    setIsDropdownOpen(false);
   };
 
   return (
     <nav className="nav-container">
-      <ul className="d-flex list-unstyled nav-list">
+      <ul className="nav-list">
         <li className="nav-item">
           <button
-            type="button"
-            className={`btn nav-button ${selected === 'About Me' ? 'btn-primary' : 'btn-light'}`}
-            onClick={() => handleButtonClick('About Me')}
+            className={`nav-button ${selectedSection === "About Me" ? "active" : ""}`}
+            onClick={() => selectSection("About Me")}
           >
             ABOUT
           </button>
         </li>
-        <li className="nav-item dropdown">
-          <button
-            type="button"
-            className={`btn nav-button ${selected.includes('Portfolio') ? 'btn-primary' : 'btn-light'}`}
-          >
-            PORTFOLIO
-          </button>
-          <div className="dropdown-content">
-            <button className="dropdown-item" onClick={() => handleButtonClick('Dev Portfolio')}>DEV PROJECTS</button>
-            <button className="dropdown-item" onClick={() => handleButtonClick('Marketing Portfolio')}>MARKETING PROJECTS</button>
-          </div>
-        </li>
+
         <li className="nav-item">
           <button
-            type="button"
-            className={`btn nav-button ${selected === 'Contact' ? 'btn-primary' : 'btn-light'}`}
-            onClick={() => handleButtonClick('Contact')}
+            className={`nav-button ${selectedSection.includes("Portfolio") ? "active" : ""}`}
+            onClick={handleDropdownToggle}
           >
-            CONTACT
+            PORTFOLIO ▾
           </button>
+          {isDropdownOpen && (
+            <div className="dropdown-content">
+              <button
+                className="dropdown-item"
+                onClick={() => handleSelect("Marketing Portfolio")}
+              >
+                MARKETING PROJECTS
+              </button>
+              <button
+                className="dropdown-item"
+                onClick={() => handleSelect("Dev Portfolio")}
+              >
+                DEV PROJECTS
+              </button>
+            </div>
+          )}
         </li>
+
         <li className="nav-item">
           <button
-            type="button"
-            className={`btn nav-button ${selected === 'Resume' ? 'btn-primary' : 'btn-light'}`}
-            onClick={() => handleButtonClick('Resume')}
+            className={`nav-button ${selectedSection === "Resume" ? "active" : ""}`}
+            onClick={() => selectSection("Resume")}
           >
             RESUME
+          </button>
+        </li>
+
+        <li className="nav-item">
+          <button
+            className={`nav-button ${selectedSection === "Contact" ? "active" : ""}`}
+            onClick={() => selectSection("Contact")}
+          >
+            CONTACT
           </button>
         </li>
       </ul>
